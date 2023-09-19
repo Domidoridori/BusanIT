@@ -1,0 +1,310 @@
+.profile {
+    width:100px;
+    margin-left: auto; 
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: block;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 30px; 
+    color: #4F8C89; 
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+#special {
+    color: #2F8480;
+}
+
+.box {
+margin : 20px; 
+padding : 30px;
+border : 1px solid black;
+border-radius : 15px;
+box-shadow: 5px 5px gray;
+}
+
+.container {
+    width: 800px;
+}
+
+.header {
+width: 50px;
+height: 50px;
+}
+
+.left {
+    width: 30%;
+    height: 400px;
+    background: cadetblue;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right {
+    width: 70%;
+    height: 400px;
+    background: coral;
+    float: right;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background: gray;
+    clear: both;
+}
+
+.navbar li {
+    display: inline-block;
+    width: 80px;
+    background: #ebf595;
+}
+
+.navbar a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.blog-content {
+    width: 80%;
+    height: 200px;
+    background: #edc751;
+    float: left;
+}
+
+.blog-img {
+    width: 20%;
+    height: 200px;
+    background: #e3cd8a;
+    display: block;
+    float: left;
+}
+
+.blog-profile {
+    width: 50px;
+    display: block;
+    border-radius: 50%;
+    float: left;
+}
+
+.blog-name {
+    float: left;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/dog.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: relative;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.main-title {
+    color: white;
+    font-size: 40px;
+    margin-top: 250px;
+    margin-left: 45%;
+}
+
+.box2 {
+    top: 20px;
+    left: 30%;
+}
+
+.main-content {
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    top: 50px;
+    left: 650px;
+}
+
+.main-button {
+    padding: 15px;
+    font-size: 20px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 120px;
+    z-index: 20;
+}
+
+.explain-box {
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #eee;
+    position: relative;
+    top: -40px;
+}
+
+.form-background {
+    background-color: black;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.w-100 {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-long {
+    height: 200px;
+}
+
+.submit-button {
+    width: 120px;
+    border: none;
+    background-color: #FFC300;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    border-radius: 10px;
+    color: #eee;
+}
+
+div, input, textarea {
+    box-sizing: border-box;
+}
+
+.cart-background {
+    width: 100%;
+    background-color: rgb(119, 163, 212);
+    padding: 30px;
+
+}
+
+h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cart-table {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgb(119, 163, 212);
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.cart-table th:nth-child(2) {
+    width: 700px;
+}
+
+.cart-table2 td {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.name {
+    width: 50%;
+}
+
+.price {
+    width: 20%;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color: white;
+    cursor: pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.btn:hover { /*마우스를 올려놓을 때*/
+    background-color: chocolate;
+}
+
+.btn:focus { /*클릭 후 계속 포커스 상태일 때*/
+    background-color: grey;
+}
+
+.btn:active {  /*클릭 중일 때*/
+    background-color: darkblue;
+    border: 2px solid black;
+}
+
+.input-test {
+    font-size: 20px;
+}
+
+.input-test:focus {
+    border: 4px solid red;
+}
+
+.link-test {
+    text-decoration: none;
+}
+
+.link-test:link {
+    color: chocolate;
+}
+
+.link-test:visited {
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-item {
+    width: 100px;
+    height: 100px;
+    background: grey;
+    margin: 5px;
+}
