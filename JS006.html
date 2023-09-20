@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <div id="alert" class="alert-box">
+        알림창
+        <button id="close">닫기</button>
+    </div>
+
+    <button onclick="">버튼 1</button>
+    <button onclick="">버튼 2</button>
+
+    <script>
+        document.getElementById('close').addEventListener('click', function() {
+            // 실행할 코드
+            document.getElementById('alert').style.display = 'none';
+        })
+        function alertControl(display, color) {
+        document.getElementById('alert').style.display = display;
+        document.getElementById('alert').style.backgroundColor = color;
+    }
+    </script>
+</body>
+</html>

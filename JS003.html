@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+<body>
+    <div id="alert" class="alert-box">
+        알림창
+        <button onclick="alertControl2('alert2', 'none')">닫기</button>
+    </div>
+    <div id="alert2" class="alert-box" style="background-color: aliceblue;">
+        알림창
+        <button onclick="alertControl2('alert2', 'none')">닫기</button>
+    </div>
+    <button onclick="alertControl('alert', 'block')">알림창 보기</button>
+</body>
+
+<script>
+    function alertControl(파라미터) {
+        document.getElementById('alert').style.display = 파라미터;
+        document.getElementById('alert2').style.display = 파라미터;
+    }
+
+    function alertControl(파라미터1, 파라미터2) {
+        document.getElementById(파라미터1).style.display = 파라미터2;
+    }
+</script>
+</html>
