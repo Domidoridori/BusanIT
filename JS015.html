@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <script>
+    
+    </script>
+    <div class="container">
+        <div class="row">
+            
+            </div>
+        </div>
+
+        <div id="more" class="container">
+            <button class="btn btn-danger">상품 더보기</button>
+            <button class="btn btn-danger" id="price">가격 순 정렬</button>
+            <button class="btn btn-danger"
+            id="special">특정 가격만 보기</button>
+        </div>
+    </div>
+
+    <script>
+        var products = [
+            { id : 0, price : 70000, title : 'Blossom Dress' },
+            { id : 1, price : 50000, title : 'Springfield Shirt' },
+            { id : 2, price : 60000, title : 'Black Monastery' }
+        ];
+
+        products.forEach(function (item, index) {
+            $('.row').append(`<div class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${item.title}</h5>
+                <p>가격 : ${item.price}</p>
+            </div>`)
+        })
+
+        $('#more').on('click', function () {
+            $.get('https://gist.githubusercontent.com/leeanJP/3ee931feb393f95895bd652344d1bf13/raw/b65cef1db551c3815352418ca885fb0ff38684d5/more1.json')
+                .done(function (result) {
+                    console.log(typeof result);
+                    console.log(result);
+                    var json = JSON.parse(result)
+                    console.log(typeof jsonData);
+                    console.log(jsonData);
+
+                }).fail(function (){
+                console.log("에러 발생");
+
+                }).always(function () {
+                console.log("여기는 항상 실행됨");
+                })
+        })
+
+        var jsonData = [
+        { "id" : 3, "price" : 15000, "title" : "Leather Blazer" },
+        { "id" : 4, "price" : 55000, "title" : "Yoga Leggings" },
+        { "id" : 5, "price" : 30000, "title" : "Sleeveless Racer" },
+        ]
+
+        jsonData.forEach(function (item, index) {
+            $('.row').append(`<div class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${item.title}</h5>
+                <p>가격 : ${item.price}</p>
+                </div>`)
+        });
+
+        $('#price').on('click', function() {
+            products.sort(function (a, b) {
+                return a.price - b.price
+            })
+            console.log(products);
+
+            $('.row').html('');
+            products.forEach(function (item, index) {
+                $('.row').append(`<div class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${item.title}</h5>
+                <p>가격 : ${item.price} </p>
+            </div>`)
+            });
+        });
+
+        $("#special").on('click', function () {
+            var products2 = products.filter(function (a) {
+                return a.price > 60000
+            })
+        })
+        
+        console.log(products);
+        $('.row').html('');
+
+        products.forEach(function (item, index) {
+            $('.row').append(`<div class="col-sm-4">
+                <img src="https://via.placeholder.com/600" class="w-100">
+                <h5>${item.title}</h5>
+                <p>가격 : ${item.price} </p>
+            </div>`)
+            });
+
+
+    </script>
+
+</body>
+</html>

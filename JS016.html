@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="quiz">
+        <h4>물에 빠지면 누구부터 구할 건가요?</h4>
+        <button>친구</button>
+        <button>부모님</button>
+        <button>애인</button>
+        <button>반려동물</button>
+    </div>
+
+    <script>
+    $("#quiz").on('click', function(e) {
+        switch (e.target.innerHTML) {
+            case '친구' :
+             alert('의리있네요');
+            break;
+             case '부모님':
+             alert('효심이 깊네요');
+            break;
+             case '애인':
+             alert('사랑꾼이네요');
+            break;
+             case '반려동물':
+             alert('동물 애호가네요');
+            break;
+            }
+        });
+
+        function getFee(isMember) {
+            return isMember ? '$2.00' : '$10.00';
+        }
+
+        console.log(getfee(true));
+
+        console.log(getFee(false));
+
+        console.log(getFee(null));
+    </script>
+</body>
+</html>
